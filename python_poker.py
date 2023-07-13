@@ -5,11 +5,26 @@ deck=[
 'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠',
 'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥',
 'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦',
-'A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣']
+'A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣',]
+
+card=random.choice(deck)
 
 def suit(card):
-     return card[-1] #Defines a card's suit
+     print(card[-1]) #Defines a card's suit
                      #https://www.youtube.com/watch?v=PZLCOgubhEE
+
+def value(card):     #Defines a cards hierarchy value
+     if (card[0]=='A'):
+          print(14)
+     elif (card[0]=='K'):
+          print(13)
+     elif (card[0]=='Q'):
+          print(12)
+     elif (card[0]=='J'):
+          print(11)
+     else:
+          print(int(card[0:-1]))
+
 
 display=['''┌─────────┐
 │A        │
